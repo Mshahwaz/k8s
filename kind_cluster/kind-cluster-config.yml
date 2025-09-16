@@ -8,6 +8,10 @@ nodes:
     image: kindest/node:v1.31.2
   - role: worker
     image: kindest/node:v1.31.2
+    extraPortMappings:
+    - containerPort: 8081
+      hostPort: 8081
+      protocol: TCP
   - role: worker
     image: kindest/node:v1.31.2
     extraPortMappings:
